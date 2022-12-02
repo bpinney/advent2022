@@ -3,7 +3,7 @@ import { GetStaticPropsContext } from "next";
 import day01 from "../days/1";
 import day02 from "../days/2";
 import Solutions from "../components/Solutions";
-import Nav from "../components/nav";
+import Nav from "../components/Nav";
 
 type SelectionProps = {
   day: string;
