@@ -4,6 +4,7 @@ import day01 from "../days/1";
 import day02 from "../days/2";
 import day03 from "../days/3";
 import day04 from "../days/4";
+import day05 from "../days/5";
 
 import Solutions from "../components/Solutions";
 import Nav from "../components/Nav";
@@ -49,6 +50,11 @@ export function getStaticPaths() {
           day: "4",
         },
       },
+      {
+        params: {
+          day: "5",
+        },
+      },
     ],
   };
 }
@@ -60,11 +66,12 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const input = fs.readFileSync(`${path}/input.txt`, "utf-8");
 
   // TODO: See if there is a way to lazily/dynamically import these
-  const logic: { [key: string]: (input: string) => number[] } = {
+  const logic: { [key: string]: (input: string) => number[] | string[] } = {
     "1": day01,
     "2": day02,
     "3": day03,
     "4": day04,
+    "5": day05,
   };
 
   const solutions = logic[day as string](input);

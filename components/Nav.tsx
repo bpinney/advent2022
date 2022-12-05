@@ -19,6 +19,9 @@ const Nav = () => {
           <li>
             <Link href="/4">4</Link>
           </li>
+          <li>
+            <Link href="/5">5</Link>
+          </li>
         </ul>
       </div>
     </>
